@@ -10,17 +10,13 @@ And in the future, if I have other project and I want to use this system to anno
 
 <br/>
 
-**Limitation**
-
-<br/>
+**Limitation**<br/>
 - Currently, we can only post a message on once social network. If we want to post a message to other social network, we need to configure to inject other service to project.<br/>
 - I just implement PostMessage for TwitterMessageService. Other MessageService are not finished
 <br/>
 <br/>
 
-**User Guide**
-
-<br/>
+**User Guide**<br/>
 - Go to application.properties and update your keys to able to can API from Twitter, Hackernews, Reddit
 <br/>
 - Currently, default project that I want to announce is Pet project. If you want to announce other project(such as Car project). You need to do:<br/>
