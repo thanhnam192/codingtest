@@ -18,6 +18,8 @@ And in the future, if I have other project and I want to use this system to anno
 
 **User Guide**<br/>
 - Go to application.properties and update your keys to able to can API from Twitter, Hackernews, Reddit<br/>
+![](key.png)
+<br/>
 - Currently, default project that I want to announce is Pet project. If you want to announce other project(such as Car project). You need to do:<br/>
     + Remove @Component("projectActivity") in PetProjectActivity class<br/>
     + Add @Component("projectActivity") to CardProjectActivity class<br/><br/>
