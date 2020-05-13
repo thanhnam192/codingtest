@@ -26,19 +26,24 @@ public class TwitterMessageService implements MessageService {
     private Logger logger = LoggerFactory.getLogger(TwitterMessageService.class);
 
     public String postMessage(String message) {
+        if( tweetMessage(message) ){
+            return "Tweet you message is successfully!";
+        }
+
+        return "Tweeting got error! Please try again later";
+    }
+
+    private boolean tweetMessage(String message){
         try {
             Twitter twitter = new TwitterFactory().getInstance();
             twitter.setOAuthConsumer(consumerKeyStr, consumerSecretStr);
-            AccessToken accessToken = new AccessToken(accessTokenStr,accessTokenSecretStr);
+            AccessToken accessToken = new AccessToken(accessTokenStr, accessTokenSecretStr);
             twitter.setOAuthAccessToken(accessToken);
-            twitter.updateStatus("Hello World with Twitter API");
-
-            return "Tweet you message is successfully!";
+            twitter.updateStatus(message);
+            return true;
         } catch (TwitterException e) {
             logger.error(e.getMessage());
-            return "Tweeting got error! Please try again later";
+            return false;
         }
-
-
     }
 }
