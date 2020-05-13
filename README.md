@@ -25,10 +25,10 @@ And in the future, if I have other project and I want to use this system to anno
 <br/>
 - Currently, default project that I want to announce is Pet project. If you want to announce other project(such as Car project). You need to do:<br/>
     + Remove @Component("projectActivity") in PetProjectActivity class<br/>
-    + Add @Component("projectActivity") to CardProjectActivity class<br/>
+    + Add @Component("projectActivity") to CardProjectActivity class<br/><br/>
 - Default social network that I post a message is Twitter. If you want to use other social network(such as Reddit..). You need to do:<br/>
     + Remove @Component in TwitterMessageService class<br/>
-    + Add @Component to RedditMessageService<br/>
+    + Add @Component to RedditMessageService<br/><br/>
 - Run ApplicationDemo class to post a message to social network    <br/>
 
 
