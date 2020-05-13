@@ -10,6 +10,9 @@ import org.springframework.context.annotation.PropertySource;
 @ComponentScan("com.announcingsystem")
 @PropertySource("classpath:application.properties")
 public class ApplicationDemo {
+
+    public static final String MESSAGE = "Hello World! I really excited with Pet project";
+
     public static void main(String[] args){
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(ApplicationDemo.class);
@@ -17,7 +20,7 @@ public class ApplicationDemo {
         ProjectActivity systemActivity = context.getBean("projectActivity", ProjectActivity.class);
 
 
-        System.out.println(systemActivity.announceProject("Hello World! My Name is Nam Nguyen"));
+        System.out.println(systemActivity.announceProject(MESSAGE));
         context.close();
     }
 }

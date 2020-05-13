@@ -27,5 +27,6 @@ And in the future, if I have other project and I want to use this system to anno
     + Remove @Component in TwitterMessageService class<br/>
     + Add @Component to RedditMessageService<br/><br/>
 - Run ApplicationDemo class to post a message to social network    <br/>
+![](result.png)
 
 
