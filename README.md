@@ -3,7 +3,7 @@
 - As intention of announcing my pet project on twitter, hackernews or reddit. 
 I need to build a system that allow I post a message to twitter, hackernews or reddit based on my configure.
 And in the future, if I have other project and I want to use this system to announce my new project then I can configurable to announce my new project. So that, I can use IoC to control my system.
-- In my system, each project will have some servers(helpers) to help them and these services can be configurable and won't change implementation of my Class. So that, We can use DI to inject services to my Class
+- In my system, each project will have some services(helpers) to help them and these services can be configurable and won't change implementation of my Class. So that, We can use DI to inject services to my Class
 <br/>
 
 ![](design.png)
