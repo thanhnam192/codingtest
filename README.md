@@ -31,5 +31,11 @@ And in the future, if I have other project(for example Car project) and I want t
 
 ![](result.png)
 
+<br/>
+
+Run Test
+If you want to run test. Just open project folder and run mvn clean install
+
+![](mvn_install.png)
 
 
