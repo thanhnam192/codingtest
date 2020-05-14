@@ -11,7 +11,7 @@ And in the future, if I have other project(for example Car project) and I want t
 <br/>
 
 **Limitation**<br/>
-- Currently, we can only post a message on one social network at time. If we want to post a message to other social network, we need to configure to inject other service to project.<br/>
+- Currently, we can only post a message on one social network at time. If we want to post a message to other social network, we need to configure to inject(DI) other service to project.<br/>
 - I just implement PostMessage for TwitterMessageService. Other MessageService are not finished
 <br/>
 <br/>
