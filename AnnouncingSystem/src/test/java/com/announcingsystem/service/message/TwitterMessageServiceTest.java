@@ -23,8 +23,8 @@ public class TwitterMessageServiceTest {
         final TwitterMessageService spy = PowerMockito.spy(new TwitterMessageService());
         PowerMockito.doReturn(true).when(spy, TWEET_MESSAGE_METHOD, MESSAGE_SUCCESS);
 
-        String rs = spy.postMessage(MESSAGE_SUCCESS);
-        Assert.assertEquals(SUCCESS_MESSAGE, rs);
+        String successResultMessage = spy.postMessage(MESSAGE_SUCCESS);
+        Assert.assertEquals(SUCCESS_MESSAGE, successResultMessage);
 
     }
 
@@ -33,8 +33,8 @@ public class TwitterMessageServiceTest {
         final TwitterMessageService spy = PowerMockito.spy(new TwitterMessageService());
         PowerMockito.doReturn(false).when(spy, TWEET_MESSAGE_METHOD, MESSAGE_ERROR);
 
-        String rs = spy.postMessage(MESSAGE_ERROR);
-        Assert.assertEquals(ERROR_MESSAGE, rs);
+        String errorResultMessage = spy.postMessage(MESSAGE_ERROR);
+        Assert.assertEquals(ERROR_MESSAGE, errorResultMessage);
 
     }
 }

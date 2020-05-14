@@ -35,13 +35,16 @@ public class TwitterMessageService implements MessageService {
 
     private boolean tweetMessage(String message){
         try {
+            logger.info("Tweet - Post Message: Processing");
             Twitter twitter = new TwitterFactory().getInstance();
             twitter.setOAuthConsumer(consumerKeyStr, consumerSecretStr);
             AccessToken accessToken = new AccessToken(accessTokenStr, accessTokenSecretStr);
             twitter.setOAuthAccessToken(accessToken);
             twitter.updateStatus(message);
+            logger.info("Tweet - Post Message: Success");
             return true;
         } catch (TwitterException e) {
+            logger.error("Tweet - Post Message: Failed");
             logger.error(e.getMessage());
             return false;
         }

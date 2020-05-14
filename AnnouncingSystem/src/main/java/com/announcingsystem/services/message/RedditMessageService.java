@@ -21,9 +21,15 @@ public class RedditMessageService implements MessageService{
 
     public String postMessage(String message) {
         try {
-            logger.info("Reddit - post a message : " + message);
+            logger.info("Reddit - Post Message: Processing");
+
+            //TODO Implement service to post message to Reddit
+
+            logger.info("Reddit - Post Message: Success");
+
             return "Reddit you message is successfully!";
         } catch (Exception e) {
+            logger.info("Reddit - Post Message: Failed");
             logger.error(e.getMessage());
             return "Reddit got error! Please try again later,=.";
         }

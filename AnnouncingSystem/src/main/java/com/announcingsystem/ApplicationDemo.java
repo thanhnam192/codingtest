@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:application.properties")
 public class ApplicationDemo {
 
-    public static final String MESSAGE = "Hello World! I really excited with Pet project";
+    public static final String MESSAGE = "Hello World! I'm Nam Nguyen. I really excited with Pet project. Do you want to join with me?";
 
     public static void main(String[] args){
         AnnotationConfigApplicationContext context =

@@ -21,9 +21,15 @@ public class HackernewsMessageService implements MessageService{
 
     public String postMessage(String message) {
         try {
-            logger.info("hackernews - post a message : " + message);
+            logger.info("Hackernews - Post Message: Processing");
+
+            //TODO Implement service to post message to Reddit
+
+            logger.info("Hackernews - Post Message: Success");
+
             return "hackernews you message is successfully!";
         } catch (Exception e) {
+            logger.info("Hackernews - Post Message: Failed");
             logger.error(e.getMessage());
             return "hackernews got error! Please try again later,=.";
         }

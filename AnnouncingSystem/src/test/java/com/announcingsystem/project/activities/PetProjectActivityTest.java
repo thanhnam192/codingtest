@@ -54,13 +54,13 @@ public class PetProjectActivityTest {
 
     @Test
     public void should_return_correct_success_message_when_tweet_success() {
-        String successResult = projectActivity.announceProject(SUCCESS_MESSAGE);
-        Assert.assertEquals(SUCCESS_RESULT, successResult);
+        String successMessageResult = projectActivity.announceProject(SUCCESS_MESSAGE);
+        Assert.assertEquals(SUCCESS_RESULT, successMessageResult);
     }
 
     @Test
     public void should_return_correct_error_message_when_tweet_failed() {
-        String errorResult = projectActivity.announceProject(ERROR_MESSAGE);
-        Assert.assertEquals(ERROR_RESULT, errorResult);
+        String errorMessageResult = projectActivity.announceProject(ERROR_MESSAGE);
+        Assert.assertEquals(ERROR_RESULT, errorMessageResult);
     }
 }
