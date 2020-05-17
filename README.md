@@ -45,10 +45,10 @@ If you want to run test. Just open project folder and run **mvn clean install**
 1. **Switch to aws-api-with-lambda branch**
 2. Install AWS CLI to your OS
 3. Create configure for your AWS CLI
-run : aws configure --profile <you_profile_name>
++ run : aws configure --profile <you_profile_name>
 
 4. Create s3 bucket
-run: aws s3 mb s3://<your_bucket_name> --profile <you_profile_name> --region <your_region>
++ run: aws s3 mb s3://<your_bucket_name> --profile <you_profile_name> --region <your_region>
 
 5. Package our project and upload fat jar to s3 bucket
 + run: mvn clean package
@@ -56,12 +56,24 @@ run: aws s3 mb s3://<your_bucket_name> --profile <you_profile_name> --region <yo
 aws s3 cp AnnouncingSystem-1.0-SNAPSHOT-jar-with-dependencies.jar s3://<your_bucket_name>/AnnouncingSystem.jar  --profile <you_profile_name> --region <your_region>
 
 6. Open api-lambda-deploy.yml in our project folder and change **S3Bucket** value to your <bucket_name>
-7. Run command below to deploy our stack via CloudFormation
+7. Run command below to deploy our stack via CloudFormation <br/>
 aws cloudformation create-stack --stack-name announcingsystem --template-body file://api-lambda-deploy.yml --region <your_region> --profile <you_profile_name> --capabilities CAPABILITY_NAMED_IAM
 
 8. Check our stack on AWS CloudFormation and get an Endpoint
++ Stack status
+
+![](stack_info.png)
+
++ Endpoint
+
+![](stack_endpoint.png)
+
+9. Call our API via PostMan
+
+![](call_api.png)
 
 
+![](result_api.png)
 
 
 
